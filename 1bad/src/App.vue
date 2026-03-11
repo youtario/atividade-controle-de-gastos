@@ -1,7 +1,6 @@
 <template>
     <div class="app">
 
-        <!-- Header -->
         <header class="header">
             <h1>Controle de Gastos</h1>
             <div class="total-badge">
@@ -9,7 +8,6 @@
             </div>
         </header>
 
-        <!-- Filter Tabs -->
         <div class="tabs">
             <button
                 v-for="tab in tabs"
@@ -22,7 +20,6 @@
             </button>
         </div>
 
-        <!-- Expense List -->
         <div class="list">
             <div v-if="filtered.length === 0" class="empty">
                 Nenhuma despesa aqui 
@@ -107,12 +104,14 @@ const tabs = [
     { value: 'all', label: 'Tudo' },
     { value: 'food', label: 'Comida' },
     { value: 'transport', label: 'Transporte' },
+       { value: 'passeio', label: 'Passeio' },
     { value: 'other', label: 'Outros' },
 ];
 
 const categoryOptions = [
     { value: 'food', label: 'Comida', icon: '🍔' },
     { value: 'transport', label: 'Transporte', icon: '🚌' },
+     { value: 'passeio', label: 'Passeio', icon: '🗿' },
     { value: 'other', label: 'Outros', icon: '📦' },
 ];
 
@@ -157,7 +156,7 @@ function removeExpense(id) {
 }
 
 function clearAll() {
-    if (!confirm('Tem certeza que quer apagar tudo?')) return;
+    if (!confirm('Tem certeza que quer apagar tudo? :( ')) return;
     expenses.value = [];
 }
 </script>

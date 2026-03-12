@@ -104,7 +104,7 @@ const tabs = [
     { value: 'all', label: 'Tudo' },
     { value: 'food', label: 'Comida' },
     { value: 'transport', label: 'Transporte' },
-       { value: 'passeio', label: 'Passeio' },
+    { value: 'passeio', label: 'Passeio' },
     { value: 'other', label: 'Outros' },
 ];
 
